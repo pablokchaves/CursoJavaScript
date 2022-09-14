@@ -1,0 +1,31 @@
+
+body {
+    background-color: rgb(100, 100, 241);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+
+header {
+    color: #fff;
+    text-align: center;
+}
+
+
+/* MAIN */
+
+#container {
+    width: 500px;
+    min-height: 250px;
+    max-height: 500px;
+    
+    background-color: #fff;
+    
+    border-radius: 20px;
+    margin: auto;
+    padding: 10px;
+}
+
+#year {
+    width: 60px;
+}

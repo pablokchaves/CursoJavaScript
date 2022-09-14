@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 03</title>
+    <style>
+        body {
+            background-color: rgb(82, 201, 201);
+            font: normal 20px Arian, sans-serif;
+        }
+        p {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testes de JavaScript</h1>
+    <p>Alguns testes pra chamar o JavaScript</p>
+    
+    /* Sempre colocar a tag script antes de fechar a tag body para melhor desempenho */
+    <script>
+       var nome = window.prompt('Qual o seu nome?')
+       document.write(`O seu nome tem ${nome.length} letras <br/>`)
+       document.write(`Olá, <strong>${nome}</strong>! Seu nome em minúsculo fica ${nome.toLowerCase()}<br/>`)
+       document.write(`Olá, <strong>${nome}</strong>! Seu nome em maiúsculo fica ${nome.toUpperCase()} <br/>`)
+
+       // O toFixed() adicionando casas decimais
+       var n1 = 1857.9
+       document.write(`O valor de ${n1} com duas casas decimais fica ${n1.toFixed(2)} <br/>`)
+       document.write(`Transformando um número em um valor monetário. Usando o ${n1} que fica ${n1.toLocaleString('pt-BR',{style: 'currency', currency: 'BRL'})}`)
+    </script>
+</body>
+</html>

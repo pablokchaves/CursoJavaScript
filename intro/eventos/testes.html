@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste eventos</title>
+        <style>
+            div {
+                margin-top: 10px;
+            }
+
+            input#strn1 {
+                width: 50px;
+            }
+            input#strn2 {
+                width: 50px;
+            }
+        </style>
+</head>
+<body>
+    <input type="number" name="strn1" id="strn1"> +
+    <input type="number" name="strn2" id="strn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+
+    <p>Mais alguma dúvida? clique aqui <span><input type="button" value="duvida" onclick="duvida()"></span></p>
+    <h3 id="resp"></h3>
+
+    <script>
+        function somar() {
+        var str1 = document.querySelector('input#strn1')
+        var str2 = document.querySelector('input#strn2')
+        var res = document.querySelector('div#res')
+        var n1 = Number.parseInt(str1.value)
+        var n2 = Number.parseInt(str2.value)
+        var soma = n1 + n2
+        res.innerHTML = `A soma de ${n1} e ${n2} é <strong>${soma}</strong>`
+        }
+
+        function duvida() {
+            var d = document.getElementById('resp')
+            d.innerHTML= 'Vai estudar caralho!'
+        }
+    </script>
+</body>
+</html>

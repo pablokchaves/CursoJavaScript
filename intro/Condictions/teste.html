@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes JS</title>
+    <style>
+        div#titulo {
+            font: normal 24px Arial;
+            width: 300px;
+            height: 300px;
+            background-color: #008000;
+            text-align: center;
+        }
+
+        div.form {
+            margin-top: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="titulo">
+    A Lívia é gata!
+    </div>
+
+    <div class="form">
+        <p>First name</p>
+        <input type="text" id="firstName">
+        <p>Last name</p>
+        <input type="text" id="lastName"><br>
+        <!--<input type="button" onclick="welcome()">-->
+        <button onclick="welcome()">Testando</button>
+    </div>
+
+    <h3 class="h3">Teste</h3>
+
+    <div>
+        <p>Digite o seu país:</p>
+        <input type="text" id="paisinp" title="País">
+        <button type="submit" onclick="nacionalidade()">Clica!</button>
+        <p id="aeroporto"></p>
+    </div>
+    
+    <script>
+        var h1 = document.getElementById('titulo');
+        h1.addEventListener('mouseenter', menter)
+        h1.addEventListener('mouseout', out)
+
+        function menter() {
+        h1.innerHTML = 'A Lívia é gata E encapetada' 
+        h1.style.background = 'red'
+        }
+
+        function out() {
+            h1.innerHTML = 'A Lívia é legal!'
+            h1.style.background = 'green'
+        }
+
+        function welcome() {
+            var pname = document.getElementById('firstName').value
+            var uname = document.getElementById('lastName').value
+
+            var ht3 = document.getElementsByClassName('h3')[0]
+
+            ht3.innerHTML = `Olá ${pname}`
+        }
+
+        function nacionalidade() {
+            var pais = document.getElementById('paisinp').value
+            var airp = document.querySelector('p#aeroporto')
+
+            if (pais != 'Brasil') {
+                //console.log('Tu é gringo/gringa!')
+                airp.innerHTML = 'É gringo(a)'
+            } else {
+                //console.log('É BR CARAI!')
+                airp.innerHTML = 'Brasil carai!'
+            }
+        }
+        
+    </script>
+</body>
+</html>

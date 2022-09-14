@@ -1,0 +1,47 @@
+@charset 'UTF-8';
+
+body {
+    background-color: #468eec;
+    color: whitesmoke;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* ### HEADER ### */
+h1 {
+    text-align: center;
+}
+
+
+/* ### BODY ### */
+
+section#container {
+    width: 500px;
+    height: 500px;
+
+    background-color: #ffffff;
+
+    margin: auto;
+    border-radius: 20px;
+
+    box-shadow: 4px 4px 10px -1px #00000069;
+
+    color: #ada966;
+}
+
+section > div {
+    color: #000000;
+    padding: 10px;
+}
+
+img {
+    margin: auto;
+}
+
+/* ### FOOTER ### */
+
+footer {
+    color: rgba(245, 245, 245, 0.664);
+}
